@@ -55,7 +55,7 @@ const MenuItemComponent: React.FC<MenuItemProps> = ({
               paddingLeft: `${depth * 20}px`,
             }}
           >
-            <MenuList items={item.children} depth={depth + 1} />
+            <SubMenuList items={item.children} depth={depth + 1} />
           </div>
         )}
       </div>
@@ -68,7 +68,7 @@ interface MenuListProps {
   depth?: number;
 }
 
-const MenuList: React.FC<MenuListProps> = ({ items, depth = 0 }) => {
+const SubMenuList: React.FC<MenuListProps> = ({ items, depth = 0 }) => {
   const [, setActiveParent] = useState<number | null>(null);
 
   const handleHover = (parentId: number | null) => {
@@ -89,4 +89,4 @@ const MenuList: React.FC<MenuListProps> = ({ items, depth = 0 }) => {
   );
 };
 
-export default MenuList;
+export default SubMenuList;

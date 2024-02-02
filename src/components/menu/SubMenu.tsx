@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MenuList from "./MenuList";
+import SubMenuList from "./SubMenuList";
 import { IMenu } from "./instance";
 
 const SubMenu = ({
@@ -16,7 +16,7 @@ const SubMenu = ({
   return (
     <SubMenuItemsContainer>
       <Container>
-        <MenuList items={items} />
+        <SubMenuList items={items} />
       </Container>
     </SubMenuItemsContainer>
   );
